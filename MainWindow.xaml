@@ -7,20 +7,24 @@
         mc:Ignorable="d"
         Title="Data Transfer" Height="350" Width="600">
     <Grid Background="#e9f0f6">
-        <Border Background="#034A6C" Height="50" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
+        <Border Background="#034A6C" Height="50" VerticalAlignment="Top" Grid.ColumnSpan="2">
             <TextBlock Text="Data transfer" Foreground="White" FontSize="18" Margin="10" VerticalAlignment="Center"/>
         </Border>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="50,80,0,0" VerticalAlignment="Top">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="15,80,0,0" VerticalAlignment="Top" Grid.Column="1">
             <Button Name="SendButton" Content="Send Data" Width="100" Height="30" Margin="5" Click="SendButton_Click"/>
             <TextBox Name="TextBox1" Width="200" Height="30" Margin="5" PreviewTextInput="TextBox1_PreviewTextInput" MaxLength="16"/>
         </StackPanel>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="50,130,0,0" VerticalAlignment="Top">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="15,130,0,0" VerticalAlignment="Top" Grid.Column="1">
             <Button Name="ReceiveButton" Content="Receive Data" Width="100" Height="30" Margin="5" Click="ReceiveButton_Click"/>
             <TextBox Name="TextBox2" Width="200" Height="30" Margin="5" IsReadOnly="True"/>
         </StackPanel>
 
-        <Border Background="#034A6C" Height="50" VerticalAlignment="Bottom"/>
+        <Border Background="#034A6C" Height="50" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
