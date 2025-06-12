@@ -1,0 +1,26 @@
+﻿<Window x:Class="DataTransferApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataTransferApp2"
+        mc:Ignorable="d"
+        Title="Data Transfer" Height="350" Width="600">
+    <Grid Background="#e9f0f6">
+        <Border Background="#034A6C" Height="50" VerticalAlignment="Top">
+            <TextBlock Text="Data transfer" Foreground="White" FontSize="18" Margin="10" VerticalAlignment="Center"/>
+        </Border>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="50,80,0,0" VerticalAlignment="Top">
+            <Button Name="SendButton" Content="Send Data" Width="100" Height="30" Margin="5" Click="SendButton_Click"/>
+            <TextBox Name="TextBox1" Width="200" Height="30" Margin="5" PreviewTextInput="TextBox1_PreviewTextInput" MaxLength="16"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="50,130,0,0" VerticalAlignment="Top">
+            <Button Name="ReceiveButton" Content="Receive Data" Width="100" Height="30" Margin="5" Click="ReceiveButton_Click"/>
+            <TextBox Name="TextBox2" Width="200" Height="30" Margin="5" IsReadOnly="True"/>
+        </StackPanel>
+
+        <Border Background="#034A6C" Height="50" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
